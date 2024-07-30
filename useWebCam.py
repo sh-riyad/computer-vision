@@ -5,9 +5,11 @@ capture = cv.VideoCapture(0)
 while True:
     # ret is a boolean that checks if the webcam is being read  
     ret, frame = capture.read()
-    cv.imshow('Webcam', frame)
+    fliped = cv.flip(frame, 0)
     
-    if cv.waitKey(1) == ord('q'):  # cv.waitKey(10000) waits for 10 seconds before breaking the loop 
+    cv.imshow('Webcam', fliped)
+    
+    if cv.waitKey(1) == ord('q'):
         break
 
 capture.release()

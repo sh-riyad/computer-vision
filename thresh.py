@@ -16,7 +16,10 @@ threshold, thresh_inv = cv.threshold(gray, 130, 255, cv.THRESH_BINARY_INV)
 
 
 # 2. Adaptive Threshold
-thresh_ada = cv.adaptiveThreshold(gray, 255, cv.ADAPTIVE_THRESH_MEAN_C, cv.THRESH_BINARY, 3, 5)
+thresh_ada = cv.adaptiveThreshold(gray, 255, cv.ADAPTIVE_THRESH_MEAN_C, cv.THRESH_BINARY, 3, 4)
+# cv.imshow("Adaptive Threshold", thresh_ada)
+
+thresh_ada = cv.adaptiveThreshold(gray, 255, cv.ADAPTIVE_THRESH_GAUSSIAN_C, cv.THRESH_BINARY, 3, 4)
 cv.imshow("Adaptive Threshold", thresh_ada)
 
 cv.waitKey(0)

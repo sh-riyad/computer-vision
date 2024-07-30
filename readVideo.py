@@ -14,14 +14,14 @@ capture = cv.VideoCapture('Videos/dog.mp4')
 count = 0
 while True:
     isTrue, frame = capture.read() # capture.read() returns a tuple of isTrue and frame 
-    # we can use the isTrue variable to check if the video is being read aslo we can use it to break the loop
+    
+    # isTrue return boolean value
+    # if there are no frame available it return None. it is NoneType
+    
     cv.imshow('Video',frame)
-    count += 1
     
     if cv.waitKey(30) & 0xFF == ord('d'):   # Press 'd' to break the loop
         break
     
 capture.release()
 cv.destroyAllWindows()
-print(count) # prints the number of frames in the video
-
