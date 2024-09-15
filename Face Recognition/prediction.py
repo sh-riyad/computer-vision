@@ -29,6 +29,6 @@ for (x,y,w,h) in img_rect:
     
     
     
-
+ 
 
 cv.waitKey(0)
