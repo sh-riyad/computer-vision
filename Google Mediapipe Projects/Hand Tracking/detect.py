@@ -35,10 +35,10 @@ while True:
     
     
     # calculate frame Rate
-    cTime = time.time()
-    fps = 1 / (cTime-pTime)
-    pTime = cTime
-    cv.putText(frame, str(int(fps)), (10,20), cv.FONT_HERSHEY_SIMPLEX, 0.5 , (255, 0, 255), 1)
+    # cTime = time.time()
+    # fps = 1 / (cTime-pTime)
+    # pTime = cTime
+    # cv.putText(frame, str(int(fps)), (10,20), cv.FONT_HERSHEY_SIMPLEX, 0.5 , (255, 0, 255), 1)
     
     cv.imshow("WebCam", frame)
     
